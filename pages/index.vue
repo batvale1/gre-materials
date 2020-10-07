@@ -28,6 +28,9 @@ export default {
       ],
     };
   },
+  async fetch({ store }) {
+    await store.dispatch('the_catalog/getCatalog');
+  },
 };
 </script>
 
