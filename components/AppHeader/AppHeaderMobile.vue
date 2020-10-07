@@ -114,7 +114,6 @@ export default {
       dropdownCatalog: { height: 0 },
       currentCategory: null,
       depthHistory: [],
-      currentLevel: 0,
     };
   },
   computed: {
