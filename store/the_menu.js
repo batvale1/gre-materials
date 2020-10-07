@@ -1,12 +1,26 @@
-export default {
-  namespaced: true,
-  state() {
-    return {};
+/* eslint no-shadow: ["error", { "allow": ["state"] }] */
+export const state = () => ({
+  isMobileMenuOpened: false,
+});
+
+export const getters = {
+  isMobileMenuOpened: (state) => state.isMobileMenuOpened,
+};
+
+export const mutations = {
+  toggleMobileMenuState: (state) => {
+    state.isMobileMenuOpened = !state.isMobileMenuOpened;
   },
-  getters: {
+  closeMobileMenu: (state) => {
+    state.isMobileMenuOpened = false;
   },
-  actions: {
+};
+
+export const actions = {
+  toggleMobileMenuState: ({ commit }) => {
+    commit('toggleMobileMenuState');
   },
-  mutations: {
+  closeMobileMenu: async ({ commit }) => {
+    commit('closeMobileMenu');
   },
 };
